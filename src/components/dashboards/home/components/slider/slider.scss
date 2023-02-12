@@ -1,0 +1,34 @@
+.home-slider {
+    table {
+        width: 100%;
+
+        tr::before {
+            display: table-cell;
+            counter-increment: rowNumber;
+            content: counter(rowNumber) ".";
+            text-align: right;
+            color: #374160;
+            vertical-align: inherit;
+        }
+        border-collapse: separate;
+        border-spacing: 8px;
+    }
+}
+
+.slide-title {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slide-heading {
+    display: flex;
+    .slide-icon {
+        display: flex;
+    }
+}
+
+.slide-numbers {
+    justify-content: flex-end;
+}

@@ -92,7 +92,7 @@
     background: #151926;
     border: 1px solid #1d243a;
     border-radius: 6px;
-    padding: 20px 20px 26px 20px;
+    padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -101,6 +101,28 @@
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-title-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & > * {
+        display: flex;
+        &:hover {
+            cursor: pointer;
+            svg path {
+                stroke: #60f5c2;
+            }
+        }
+        &:first-child {
+            margin-right: 16px;
+        }
+    }
 }
 
 ol {
@@ -172,6 +194,78 @@ ol {
 // Table
 .home-table {
     margin-bottom: 24px;
+    td {
+        padding: 16px;
+    }
+
+    table {
+        border-style: hidden; /* hide standard table (collapsed) border */
+        box-shadow: 0 0 0 1px #1d243a; /* this draws the table border  */
+        background: #151926;
+        border: 1px solid #1d243a;
+        border-radius: 6px;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    table {
+        counter-reset: rowNumber;
+    }
+
+    tr {
+        border-bottom: 1px solid #1d243a;
+        &:last-child {
+            border: none;
+        }
+    }
+
+    table tr::before {
+        display: table-cell;
+        counter-increment: rowNumber;
+        content: counter(rowNumber) ".";
+        text-align: right;
+        color: #374160;
+        vertical-align: inherit;
+    }
+
+    th {
+        font-weight: 400;
+        text-align: start;
+        padding: 20px;
+        border-bottom: 1px solid #1d243a;
+        &.order {
+            width: 0%;
+        }
+        &.pool {
+            padding-right: 20px;
+            // width: 10%;
+        }
+        &.price {
+            width: 8%;
+        }
+        &.hours {
+            width: 8%;
+        }
+        &.min {
+            width: 5%;
+        }
+        &.hour {
+            width: 5%;
+        }
+        &.sixhour {
+            width: 5%;
+        }
+        &.twofour {
+            width: 5%;
+        }
+        &.volume {
+            width: 10%;
+        }
+        &.liqudity {
+            width: 10%;
+        }
+    }
 }
 .pools-title {
     margin-bottom: 24px;
@@ -185,83 +279,11 @@ ol {
     }
 }
 
-th {
-    font-weight: 400;
-    text-align: start;
-    padding: 20px;
-    border-bottom: 1px solid #1d243a;
-    &.order {
-        width: 1%;
-    }
-    &.pool {
-        padding-right: 20px;
-        // width: 10%;
-    }
-    &.price {
-        width: 8%;
-    }
-    &.hours {
-        width: 8%;
-    }
-    &.min {
-        width: 5%;
-    }
-    &.hour {
-        width: 5%;
-    }
-    &.sixhour {
-        width: 5%;
-    }
-    &.twofour {
-        width: 5%;
-    }
-    &.volume {
-        width: 10%;
-    }
-    &.liqudity {
-        width: 10%;
-    }
-}
-
-table {
-    counter-reset: rowNumber;
-}
-
-tr {
-    border-bottom: 1px solid #1d243a;
-    &:last-child {
-        border: none;
-    }
-}
-
-table tr::before {
-    display: table-cell;
-    counter-increment: rowNumber;
-    content: counter(rowNumber) ".";
-    text-align: right;
-    color: #374160;
-}
-
 .pool-title {
     color: #374160;
     span {
         color: #fff;
     }
-}
-
-td {
-    padding: 16px;
-}
-
-table {
-    border-style: hidden; /* hide standard table (collapsed) border */
-    box-shadow: 0 0 0 1px #1d243a; /* this draws the table border  */
-    background: #151926;
-    border: 1px solid #1d243a;
-    border-radius: 6px;
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
 }
 
 .plus {
@@ -359,4 +381,22 @@ table {
     &:last-child {
         border: none;
     }
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #60f5c2 !important;
+}
+
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}
+
+.slide-list {
+    padding-bottom: 8px;
+}
+
+span.swiper-pagination-bullet {
+    background: #374160;
 }

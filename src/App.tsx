@@ -4,6 +4,7 @@ import Home from "./components/dashboards/home/Home";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Menu from "./components/menu/Menu";
+import "swiper/scss";
 
 function App() {
   return (
