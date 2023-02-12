@@ -4,27 +4,22 @@
     top: 0;
     left: 0;
     height: 100vh;
-    // box-shadow: 0px 0px 24px #11141f;
     overflow: hidden;
     display: flex;
     z-index: 1000;
-    nav {
-        padding: 85px 24px 0px 24px;
-        overflow: hidden;
-        width: 40px;
-        .link-title {
-            width: 0%;
-            display: flex;
-            overflow: hidden;
-        }
+    padding: 86px 24px 0px 24px;
+    transition: all 0.4s ease-in-out;
 
-        &.isOpen {
-            animation: navOpener 0.3s ease-in-out forwards;
-            a .link-title {
-                animation: menuOpener 0.3s ease-in-out forwards;
-            }
-            a .link-icon {
-                margin-right: 15px;
+    &.isOpen {
+        transition: all 0.4s ease-in-out;
+        box-shadow: 0px 0px 24px #11141f;
+        padding-right: 46px;
+
+        nav {
+            .nav-link {
+                .link-text {
+                    animation: linkAnimation 0.4s ease-in-out forwards;
+                }
             }
         }
     }
@@ -34,26 +29,14 @@
     stroke: #374160;
 }
 
-@keyframes menuOpener {
-    from {
-        opacity: 0;
-        left: 0;
-        width: 0%;
-    }
+.link-text {
+    opacity: 0;
+    width: 0px;
+    overflow: hidden;
 
-    to {
-        opacity: 1;
-        width: 100%;
-    }
-}
-
-@keyframes navOpener {
-    from {
-        width: 40px;
-    }
-
-    to {
-        width: 100%;
+    .link-title {
+        margin-left: 16px;
+        width: 130px;
     }
 }
 
@@ -62,16 +45,21 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 40px;
+
     &:last-child {
         margin-bottom: 0px;
     }
 
     .link-title {
+        transition: 0.3s ease-in-out;
         color: var(--secondary-color);
     }
     .link-icon {
+        svg path {
+            transition: 0.3s ease-in-out;
+        }
         display: flex;
-        // margin-right: 15px;
+        margin-right: 0px;
     }
     &.active {
         .link-icon svg path {
@@ -80,5 +68,41 @@
         .link-title {
             color: #fff;
         }
+    }
+
+    &:hover {
+        .link-title {
+            color: #fff;
+        }
+        .link-icon svg path {
+            stroke: #fff;
+        }
+    }
+}
+
+@keyframes linkAnimation {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    50% {
+        opacity: 0.4;
+        width: 75px;
+    }
+    100% {
+        opacity: 1;
+        width: 150px;
+    }
+}
+
+@keyframes close {
+    from {
+        width: 170px;
+        opacity: 1;
+    }
+
+    to {
+        width: 0px;
+        opacity: 0;
     }
 }
