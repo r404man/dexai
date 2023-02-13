@@ -3,8 +3,16 @@
     /* flex-direction: column; */
 }
 
-.app-header {}
-
 .app-menu {
     padding-right: 88px;
+}
+
+@media (min-width:320px) and (max-width: 768px) {
+    .app-menu {
+        padding-right: 0px;
+    }
+
+    .App {
+        display: block;
+    }
 }

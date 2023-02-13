@@ -1,0 +1,47 @@
+.card-item {
+    // width: 17%;
+    padding: 20px 20px 40px 20px;
+    background: #151926;
+    border: 1px solid #1d243a;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    .card-text {
+        color: #fff;
+    }
+    &.plus {
+        background-image: url("./../../../../../assets/Rectangle2.png");
+    }
+    &.minus {
+        background-image: url("./../../../../../assets/Rectangle3.png");
+
+        .card-info {
+            .card-info-icon svg path {
+                fill: #ea3943;
+            }
+            .card-info-text {
+                color: #ea3943;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .card-item {
+        padding: 16px 16px 26px 16px;
+    }
+    .card-text {
+        font-size: 14px;
+    }
+    .card-info-text {
+        font-size: 12px;
+    }
+    .card-number {
+        font-size: 20px !important;
+    }
+}
+
+.card-icon {
+    display: flex;
+}
