@@ -4,6 +4,7 @@ import headerSelector from "../../assets/header-selector.png";
 // import headerSelector from "../../assets/header-selector.png";
 import icon from "./../../assets/googleplay.png";
 import icon2 from "./../../assets/appstore.png";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -141,7 +142,6 @@ function Header() {
               />
             </svg>
           </div>
-          .
           <div className="connect-title">
             Connect Wallet
           </div>
@@ -243,7 +243,7 @@ function Header() {
           </div>
         </div>
         <div className="header-mobile-menu-links">
-          <div className="mobile-menu-link">
+          <NavLink to={""} className="mobile-menu-link">
             <div className="menu-link-icon">
               <svg
                 width="32"
@@ -262,8 +262,8 @@ function Header() {
               </svg>
             </div>
             <div className="menu-link-text">Home</div>
-          </div>{" "}
-          <div className="mobile-menu-link">
+          </NavLink>{" "}
+          <NavLink to={"dex"} className="mobile-menu-link">
             <div className="menu-link-icon">
               <svg
                 width="32"
@@ -284,7 +284,7 @@ function Header() {
             <div className="menu-link-text">
               Dex analizer
             </div>
-          </div>{" "}
+          </NavLink>{" "}
           <div className="mobile-menu-link">
             <div className="menu-link-icon">
               <svg

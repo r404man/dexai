@@ -1,16 +1,31 @@
 import React, { useRef, useState } from "react";
+import {
+  Link,
+  NavLink,
+  useLocation,
+} from "react-router-dom";
 import "./menu.scss";
 
 function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   const windowSize = useRef([window.innerWidth]);
-  console.log(windowSize.current);
+  const location = useLocation().pathname;
+  let x = location.split("/");
 
   if (windowSize.current[0] < 769) {
+    if (x[1] === "dex")
+      return (
+        <div className="mobile-menu">
+          <DexMenu />
+        </div>
+      );
     return (
       <div className="mobile-menu">
         <nav className="mobile-nav">
-          <a href="" className="mobile-link active">
+          <NavLink
+            to="favourites"
+            className={"mobile-link"}
+          >
             <div className="mobile-link-icon">
               <svg
                 width="26"
@@ -31,8 +46,8 @@ function Menu() {
             <div className="mobile-link-text">
               Favourites
             </div>
-          </a>
-          <a href="" className="mobile-link">
+          </NavLink>
+          <NavLink to={"viewed"} className="mobile-link">
             <div className="mobile-link-icon">
               <svg
                 width="26"
@@ -58,8 +73,8 @@ function Menu() {
               </svg>
             </div>
             <div className="mobile-link-text">Viewed</div>
-          </a>
-          <a href="" className="mobile-link">
+          </NavLink>
+          <NavLink to={"gainers"} className="mobile-link">
             <div className="mobile-link-icon">
               <svg
                 width="27"
@@ -78,8 +93,8 @@ function Menu() {
               </svg>
             </div>
             <div className="mobile-link-text">Gainers</div>
-          </a>
-          <a href="" className="mobile-link">
+          </NavLink>
+          <NavLink to={"losers"} className="mobile-link">
             <div className="mobile-link-icon">
               <svg
                 width="27"
@@ -98,8 +113,8 @@ function Menu() {
               </svg>
             </div>
             <div className="mobile-link-text">Losers</div>
-          </a>
-          <a href="" className="mobile-link">
+          </NavLink>
+          <NavLink to={"pools"} className="mobile-link">
             <div className="mobile-link-icon">
               <svg
                 width="27"
@@ -118,7 +133,7 @@ function Menu() {
               </svg>
             </div>
             <div className="mobile-link-text">Pools</div>
-          </a>
+          </NavLink>
         </nav>
       </div>
     );
@@ -131,7 +146,7 @@ function Menu() {
       className={isOpen ? "menu isOpen" : "menu"}
     >
       <nav>
-        <a href="" className="nav-link active">
+        <NavLink to={""} className="nav-link">
           <div className="link-icon">
             <svg
               width="32"
@@ -153,9 +168,9 @@ function Menu() {
           <div className="link-text">
             <div className="link-title">Ai Top Ranking</div>
           </div>
-        </a>
+        </NavLink>
 
-        <a href="" className="nav-link">
+        <NavLink to={"dex"} className="nav-link">
           <div className="link-icon">
             <svg
               width="32"
@@ -177,9 +192,9 @@ function Menu() {
           <div className="link-text">
             <div className="link-title">Dex analizer</div>
           </div>
-        </a>
+        </NavLink>
 
-        <a href="" className="nav-link">
+        <NavLink to={"swap"} className="nav-link">
           <div className="link-icon">
             <svg
               width="32"
@@ -201,7 +216,7 @@ function Menu() {
           <div className="link-text">
             <div className="link-title">Swap</div>
           </div>
-        </a>
+        </NavLink>
 
         <a href="" className="nav-link">
           <div className="link-icon">
@@ -328,6 +343,73 @@ function Menu() {
         </a>
       </nav>
     </div>
+  );
+}
+
+export function DexMenu() {
+  return (
+    <nav className="mobile-nav dex">
+      <NavLink to="/dex/chart" className={"mobile-link"}>
+        <div className="mobile-link-icon">
+          <svg
+            width="27"
+            height="26"
+            viewBox="0 0 27 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 21.6666V10.8333M13.5 21.6666V4.33325M7 21.6666V15.1666"
+              stroke="#374160"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div className="mobile-link-text">Chart</div>
+      </NavLink>
+      <NavLink to={"/dex/overview"} className="mobile-link">
+        <div className="mobile-link-icon">
+          <svg
+            width="27"
+            height="26"
+            viewBox="0 0 27 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.4998 17.3334V13.0001M13.4998 8.66675H13.5107M24.3332 13.0001C24.3332 18.9832 19.4829 23.8334 13.4998 23.8334C7.51675 23.8334 2.6665 18.9832 2.6665 13.0001C2.6665 7.017 7.51675 2.16675 13.4998 2.16675C19.4829 2.16675 24.3332 7.017 24.3332 13.0001Z"
+              stroke="#374160"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div className="mobile-link-text">Overview</div>
+      </NavLink>
+      <NavLink to={"/dex/holders"} className="mobile-link">
+        <div className="mobile-link-icon">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.25 13H22.75M3.25 6.5H22.75M3.25 19.5H16.25"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div className="mobile-link-text">Holders</div>
+      </NavLink>
+    </nav>
   );
 }
 

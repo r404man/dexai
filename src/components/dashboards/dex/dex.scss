@@ -1,0 +1,714 @@
+.dex-controller-toggler {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+    & > * {
+        transition: 0.3s ease-in-out;
+        &:first-child {
+            margin-right: 32px;
+        }
+        & {
+            color: #374160;
+            cursor: pointer;
+        }
+        &:hover {
+            color: #ffff;
+        }
+        &.active {
+            color: #fff;
+        }
+    }
+}
+
+.chart-amount {
+    margin-bottom: 16px !important;
+}
+
+.controller-overview h1 {
+    margin-bottom: 16px;
+}
+
+.dex-part {
+    display: flex;
+    flex-direction: row;
+}
+
+.dex {
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    .dex-controller {
+        width: 25%;
+    }
+
+    .controller-currency {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 24px;
+        .currency-icon {
+            display: flex;
+            margin-right: 16px;
+        }
+        .currency-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .currency-subtitle {
+            color: #374160;
+        }
+    }
+
+    .controller-amount {
+        margin-bottom: 24px;
+        .amount-top {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .amount-footer {
+            color: #374160;
+        }
+        .amount-number {
+            font-size: 32px;
+            margin-right: 16px;
+            span {
+                color: #374160;
+            }
+        }
+    }
+
+    .controller-favour {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 24px;
+        cursor: pointer;
+
+        .favour-icon {
+            display: flex;
+            margin-right: 8px;
+        }
+
+        .favour-text {
+            font-weight: 500;
+        }
+    }
+
+    .controller-lists {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        ul {
+            padding: 0;
+            li {
+                list-style-type: none;
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                .list-item-label {
+                    font-size: 14px;
+                    color: #374160;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    .controller-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        margin-bottom: 24px;
+        .controller-card {
+            padding: 16px 0px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            .card-value {
+                color: #fff;
+            }
+
+            &.minus {
+                background: linear-gradient(180deg, #231b2a 14.7%, rgba(35, 27, 42, 0) 100%),
+                    linear-gradient(180deg, #1a2730 14.7%, rgba(26, 39, 48, 0) 100%), #151926;
+                border: 1px solid #1d243a;
+                // .percent-icon {
+                //     transform: rotate(90deg);
+                // }
+            }
+            &.plus {
+                background: linear-gradient(180deg, #1a2730 14.7%, rgba(26, 39, 48, 0) 100%), #151926;
+                border: 1px solid #1d243a;
+                border-radius: 6px;
+            }
+            border-radius: 6px;
+            .amount-percent {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .controller-selector {
+        background: #151926;
+        border: 1px solid #1d243a;
+        border-radius: 6px;
+        padding: 10px 10px 17px 10px;
+        margin-bottom: 16px;
+        .selector-head {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            .head-item {
+                color: #374160;
+                cursor: pointer;
+                padding: 9px 0.3em;
+
+                &:hover {
+                    color: #fff;
+                    background: #11141f;
+                }
+                &.active {
+                    color: #fff;
+                    background: #11141f;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        .selector-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 30px;
+        }
+
+        .selector-footer-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            .item-title {
+                color: #374160;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .controller-wallet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .wallet-copy-btn {
+            display: flex;
+            padding: 0px 16px;
+            border-right: 1px solid #1d243a;
+            cursor: pointer;
+        }
+        .wallet-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: #151926;
+            border: 1px solid #1d243a;
+            border-radius: 6px;
+            padding: 8px 16px;
+        }
+        .wallet-icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .wallet-icon {
+                padding-left: 16px;
+            }
+        }
+        .wallet-name {
+            color: #374160;
+            font-size: 14px;
+            width: 35px;
+            margin-right: 15px;
+        }
+        .wallet-value {
+            font-size: 14px;
+        }
+        .wallet-socials {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            & > * {
+                background: #151926;
+                border: 1px solid #1d243a;
+                border-radius: 6px;
+                margin-right: 8px;
+                padding: 8px 16px;
+                cursor: pointer;
+            }
+        }
+        .wallet-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .wallet-link {
+                background: #151926;
+                border: 1px solid #1d243a;
+                border-radius: 6px;
+                padding: 11px 16px;
+                margin-right: 8px;
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+.dex-info {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 24px;
+    .dex-info-graph {
+        width: 100%;
+        height: 540px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background: #151926;
+        border: 1px solid #1d243a;
+        border-radius: 6px;
+        margin-bottom: 24px;
+        color: #374160;
+    }
+}
+
+.amount-percent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .percent-number {
+        font-size: 14px;
+    }
+    .percent-icon {
+        display: flex;
+        margin-right: 4px;
+    }
+
+    &.plus {
+        .percent-icon svg path {
+            fill: #60f5c2;
+        }
+        .percent-number {
+            color: #60f5c2;
+        }
+    }
+
+    &.minus {
+        .percent-icon svg path,
+        .percent-number {
+            fill: #ea3943;
+        }
+    }
+}
+
+.dex-table {
+    margin-bottom: 24px;
+    th {
+        font-weight: 400;
+    }
+
+    thead {
+        border-bottom: 1px solid#1D243A;
+        text-align: left;
+        th {
+            padding: 16px 0px 20px 0px;
+        }
+        .time {
+            padding-left: 20px;
+            width: 7%;
+        }
+        .type {
+            width: 3%;
+        }
+        .price1 {
+            width: 8%;
+        }
+        .price2 {
+            width: 7%;
+        }
+        .amount {
+            width: 9%;
+        }
+        .total {
+            width: 6%;
+        }
+        .from {
+            width: 6%;
+        }
+        .tx {
+            width: 4%;
+        }
+    }
+
+    .tx {
+        text-align: center;
+    }
+
+    tr {
+        td {
+            text-align: left;
+            padding: 16px 0px 16px 0px;
+            &:first-child {
+                padding-left: 20px;
+            }
+            &.from {
+                color: #fff;
+            }
+            &.tx {
+                cursor: pointer;
+                background: linear-gradient(93.3deg, #18fff0 0%, #642fc5 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+    }
+
+    table {
+        border-style: hidden; /* hide standard table (collapsed) border */
+        box-shadow: 0 0 0 1px #1d243a; /* this draws the table border  */
+        background: #151926;
+        border: 1px solid #1d243a;
+        border-radius: 6px;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    table {
+        counter-reset: rowNumber;
+    }
+
+    tr {
+        border-bottom: 1px solid #1d243a;
+        &:last-child {
+            border: none;
+        }
+        &.minus {
+            color: #ea3943;
+        }
+        &.plus {
+            color: #60f5c2;
+        }
+    }
+}
+
+// HOLDERS
+
+.holders-list-item {
+    background: #151926;
+    border: 1px solid #1d243a;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 16px;
+
+    .item-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .item-wallet-status {
+        color: #ea3943;
+        margin-top: 8px;
+    }
+    .item-number {
+        color: #374160;
+        margin-right: 16px;
+    }
+    .item-info {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        .item-subtitle {
+            color: #374160;
+            margin-top: 8px;
+        }
+    }
+    .item-wallet {
+        font-size: 14px;
+    }
+}
+
+.holders-pie {
+    background: #151926;
+    border: 1px solid #1d243a;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .pie-chart {
+        position: relative;
+        width: 40%;
+        margin-right: 24px;
+    }
+    .chart-amount {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .chart-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+    .chart-subtitle {
+        font-size: 14px;
+        color: #374160;
+    }
+    .pie-legend {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .legend-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .legend-icon {
+        margin-right: 8px;
+    }
+
+    .legend-info {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.minus {
+    svg {
+        transform: rotate(90deg);
+    }
+}
+.holders-title h1 {
+    margin-bottom: 16px;
+}
+
+.mobile-heading {
+    display: none;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+    .dex {
+        padding: 0px 16px 58px 16px;
+    }
+    .dex-part {
+        flex-direction: column;
+        display: none;
+    }
+    .dex .dex-controller {
+        width: 100%;
+    }
+    .dex-info {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .controller-wallet {
+        overflow: hidden;
+    }
+    .dex-controller-toggler {
+        display: none;
+    }
+    .mobile-heading {
+        display: block;
+        margin-bottom: 16px;
+    }
+    .dex .controller-currency .currency-title {
+        font-size: 16px;
+    }
+    .dex .controller-currency .currency-subtitle {
+        font-size: 14px;
+    }
+    .dex .controller-amount .amount-number {
+        font-size: 24px;
+    }
+    .dex .controller-amount .amount-top {
+        margin-bottom: 8px;
+    }
+    .dex .controller-currency {
+        margin-bottom: 16px;
+    }
+    .dex .controller-favour .favour-text {
+        font-size: 14px;
+    }
+    .dex .controller-lists ul li .list-item-label {
+        font-size: 12px;
+    }
+    .list-item-value {
+        font-size: 14px;
+    }
+    .dex .controller-lists {
+        margin-bottom: 20px;
+    }
+    .dex .controller-cards {
+        margin-bottom: 20px;
+        grid-gap: 12px;
+    }
+    .card-value {
+        font-size: 14px;
+    }
+    .amount-percent.minus .percent-icon svg path,
+    .amount-percent.minus .percent-number {
+        font-size: 12px;
+    }
+    .dex .controller-selector .selector-head .head-item {
+        font-size: 14px;
+    }
+    .dex .controller-selector .selector-footer-item .item-title {
+        font-size: 12px;
+    }
+    .item-subtitle {
+        font-size: 14px;
+    }
+    .dex .controller-selector .selector-head {
+        margin-bottom: 10px;
+    }
+    .dex .controller-selector .selector-head .head-item {
+        padding: 10px 10px;
+    }
+    .dex .controller-selector {
+        display: flex;
+        flex-direction: column;
+    }
+    .dex .controller-selector .selector-footer {
+        padding: 0px 15px;
+    }
+    .dex .controller-wallet .wallet-name {
+        font-size: 12px;
+        width: 25px;
+    }
+    .dex .controller-wallet .wallet-value {
+        font-size: 12px;
+    }
+    .dex .controller-wallet .wallet-item {
+        padding: 8px 10px;
+    }
+    .dex .controller-wallet .wallet-socials > * {
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .dex .controller-wallet .wallet-links .wallet-link {
+        font-size: 12px;
+        padding: 11px 15px;
+    }
+
+    .dex-info .dex-info-graph {
+        height: 315px;
+        margin-bottom: 16px;
+    }
+
+    .dex-table thead {
+        th {
+            font-size: 10px;
+        }
+    }
+
+    .dex-table tr td {
+        font-size: 12px;
+        padding: 16px 10px 16px 10px;
+    }
+
+    .dex-table table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        background-color: unset;
+        border: unset;
+        box-shadow: unset;
+    }
+    .dex-table thead th {
+        padding: 0px 10px 20px 10px;
+    }
+
+    .holders-pie {
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+    .holders-pie .pie-chart {
+        margin-right: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+    }
+
+    .legend-text {
+        font-size: 12px;
+    }
+    .legend-value {
+        font-size: 14px;
+    }
+    .holders-pie .pie-legend {
+        margin-top: 24px;
+        padding: 0px 12px;
+    }
+    .holders-pie .legend-info {
+        align-items: center;
+    }
+    .legend-icon {
+        display: flex;
+    }
+    .legend-icon svg {
+        width: 9px;
+        height: 9px;
+    }
+    .holders-list-item .item-number {
+        font-size: 12px;
+    }
+    .item-title {
+        font-size: 12px;
+    }
+    .item-subtitle {
+        font-size: 12px;
+    }
+    .holders-list-item .item-wallet {
+        font-size: 12px;
+    }
+    .holders-list-item {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+}

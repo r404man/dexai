@@ -107,24 +107,43 @@
     }
 }
 
+.mobile-menu {
+    display: none;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
     .menu {
         display: none;
     }
 
+    .header-mobile-menu-links {
+        .mobile-menu-link.active {
+            .menu-link-text {
+                color: #fff;
+            }
+            svg path {
+                stroke: #fff;
+            }
+        }
+    }
     .mobile-menu {
+        display: block;
         position: fixed;
         bottom: 0;
         left: 0;
         background: #151926;
         border-top: 1px solid #1d243a;
         width: 100%;
+        z-index: 1000;
         .mobile-nav {
             padding: 8px 15px;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            &.dex {
+                padding: 8px 25px;
+            }
         }
         .mobile-link {
             display: flex;

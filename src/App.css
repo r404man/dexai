@@ -7,6 +7,10 @@
     padding-right: 88px;
 }
 
+.app-header {
+    width: 100%;
+}
+
 @media (min-width:320px) and (max-width: 768px) {
     .app-menu {
         padding-right: 0px;

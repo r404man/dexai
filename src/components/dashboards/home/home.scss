@@ -375,7 +375,10 @@ span.swiper-pagination-bullet {
     .card-list {
         grid-template-columns: 1fr;
         grid-gap: 12px;
-        padding-bottom: 40px;
+        padding: 0px 16px 40px 16px;
+    }
+    .home-title {
+        padding: 0px 16px;
     }
     .home-sliders {
         display: none;
@@ -394,6 +397,7 @@ span.swiper-pagination-bullet {
         .slider-title-text {
             margin-bottom: 16px;
             font-size: 22px;
+            padding: 0px 16px;
         }
 
         table {
@@ -407,6 +411,7 @@ span.swiper-pagination-bullet {
                 color: #374160;
                 vertical-align: inherit;
                 padding-bottom: 24px;
+                font-size: 12px;
             }
             td {
                 padding-bottom: 24px;
@@ -471,6 +476,11 @@ span.swiper-pagination-bullet {
                     }
                 }
             }
+        }
+    }
+    .pools-mobile {
+        .slider-title-text {
+            padding: 0px 16px;
         }
     }
 }

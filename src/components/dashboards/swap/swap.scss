@@ -1,0 +1,64 @@
+.swap-form-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-selector-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0px 8px 0px 16px;
+}
+
+.form-selector-control {
+    display: flex;
+    svg {
+        transform: rotate(-90deg);
+    }
+}
+
+.swap-balance {
+    color: #374160;
+    span {
+        color: #fff;
+    }
+}
+
+.swap-form-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.swap-max-btn {
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(
+            93.3deg,
+            rgba(23, 212, 187, 0.6) 0%,
+            rgba(34, 41, 74, 0.6) 51.56%,
+            rgba(100, 47, 197, 0.6) 100%
+        ),
+        #11141f;
+    border-radius: 6px;
+}
+
+.swap-form-input {
+    input {
+        background: #11141f;
+        border: 1px solid #1d243a;
+        border-radius: 8px;
+        padding: 16px;
+        color: #fff;
+        font-family: "GothamPro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15px;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
