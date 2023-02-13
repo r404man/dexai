@@ -66,7 +66,7 @@ function App() {
             element={<Holders />}
           />
           <Route path="/dex/chart" element={<Chart />} />
-          <Route path="/dex" element={<Overview />}></Route>
+          <Route path="/dex" element={<Dex />}></Route>
           <Route path="/swap" element={<Swap />}></Route>
         </Routes>
         <Footer />

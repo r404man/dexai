@@ -285,7 +285,7 @@ function Header() {
               Dex analizer
             </div>
           </NavLink>{" "}
-          <div className="mobile-menu-link">
+          <NavLink to={"swap"} className="mobile-menu-link">
             <div className="menu-link-icon">
               <svg
                 width="32"
@@ -304,7 +304,7 @@ function Header() {
               </svg>
             </div>
             <div className="menu-link-text">Swap</div>
-          </div>{" "}
+          </NavLink>{" "}
           <div className="mobile-menu-link">
             <div className="menu-link-icon">
               <svg

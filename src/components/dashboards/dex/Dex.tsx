@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import icon from "../../../assets/selector.png";
 import "./dex.scss";
 import {
@@ -8,11 +8,18 @@ import {
   Legend,
 } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-import { Outlet } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Dex() {
   const [isToggle, setIsToggle] = useState(true);
+  const windowSize = useRef([window.innerWidth]);
+  let navigate = useNavigate();
+  useEffect(() => {
+    if (windowSize.current[0] < 769) {
+      return navigate("/dex/overview");
+    }
+  });
 
   return (
     <div className="dex">
