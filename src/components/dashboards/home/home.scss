@@ -499,6 +499,14 @@ span.swiper-pagination-bullet {
             padding: 0px 16px;
         }
     }
+    .mobile {
+        .table-controls {
+            display: flex !important;
+            .page-item {
+                padding: 12px 5px;
+            }
+        }
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {

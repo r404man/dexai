@@ -529,6 +529,14 @@
     display: none;
 }
 @media (min-width: 320px) and (max-width: 768px) {
+    .mobile {
+        .table-controls {
+            margin-bottom: 15px;
+            .controls {
+                width: 100%;
+            }
+        }
+    }
     .dex {
         padding: 0px 16px 58px 16px;
     }
@@ -710,6 +718,17 @@
     .holders-list-item {
         padding: 16px;
         margin-bottom: 12px;
+    }
+    .dex-table-controls {
+        .table-controls {
+            display: flex;
+            .page-item {
+                padding: 12px 5px;
+            }
+        }
+    }
+    .dex-data {
+        padding-bottom: 20px;
     }
 }
 

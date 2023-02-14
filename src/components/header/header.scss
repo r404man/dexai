@@ -6,12 +6,47 @@ header {
     margin-top: 16px;
     margin-bottom: 24px;
     align-items: center;
+    position: relative;
     // display: flex;
     // flex-direction: row;
     // align-items: center;
     // justify-content: space-between;
     // padding: 16px 16px 24px 16px;
 }
+
+.mobile-input {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 10px 0px;
+    background: #11141f;
+    display: grid;
+    align-items: center;
+    display: none;
+    &.active {
+        display: grid;
+        grid-template-columns: 1fr 0.3fr;
+        grid-gap: 16px;
+    }
+    input {
+        padding: 10px 16px;
+        background: #151926;
+        border: 1px solid #1d243a;
+        border-radius: 6px;
+        margin-left: 16px;
+        // width: 70%;
+        color: #fff;
+        font-size: 16px;
+        font-family: "GothamPro";
+    }
+    .input-icon {
+        justify-content: center;
+        margin-right: 16px;
+        display: flex;
+    }
+}
+
 .selector {
     border-radius: 6px;
     border: 1px solid #1d243a;

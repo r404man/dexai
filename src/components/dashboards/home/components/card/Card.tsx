@@ -2,10 +2,12 @@ import React from "react";
 import "./card.scss";
 
 import icon from "./../../../../../assets/eth.png";
+import { Link } from "react-router-dom";
 
 function Card({ isUp }: any) {
   return (
-    <div
+    <Link
+      to={""}
       className={
         isUp ? "card-item plus" : "card-item minus"
       }
@@ -36,7 +38,7 @@ function Card({ isUp }: any) {
       <div className="card-number">
         <span>$</span>32,482.44
       </div>
-    </div>
+    </Link>
   );
 }
 

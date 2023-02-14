@@ -8,7 +8,7 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/scss";
 import "./slider.scss";
 
-function Slider({ sliderNumber }: any) {
+function Slider({ sliderNumber, sliderTitle }: any) {
   const pagination = {
     clickable: true,
     renderBullet: function (
@@ -23,7 +23,7 @@ function Slider({ sliderNumber }: any) {
     <div className="home-slider">
       <div className="slider-title">
         <div className="slider-title-text">
-          Most Viewed Pools
+          {sliderTitle}
         </div>
         <div className="slider-title-controls">
           <div

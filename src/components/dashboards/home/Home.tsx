@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import icon from "./../../../assets/eth.png";
 import eth18 from "../../../assets/eth18.png";
 
@@ -6,11 +6,20 @@ import Card from "./components/card/Card";
 import Slider from "./components/slider/Slider";
 import TableRow from "./components/tablerow/TableRow";
 import "./home.scss";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const sliderNumber1 = 1,
     sliderNumber2 = 2,
     sliderNumber3 = 3;
+
+  const windowSize = useRef([window.innerWidth]);
+  let navigate = useNavigate();
+  useEffect(() => {
+    if (windowSize.current[0] < 769) {
+      return navigate("/favourites");
+    }
+  });
 
   return (
     <div className="home">
@@ -24,9 +33,18 @@ function Home() {
       </div>
 
       <div className="home-sliders">
-        <Slider sliderNumber={sliderNumber1} />
-        <Slider sliderNumber={sliderNumber2} />
-        <Slider sliderNumber={sliderNumber3} />
+        <Slider
+          sliderNumber={sliderNumber1}
+          sliderTitle={"Most Viewed Pools"}
+        />
+        <Slider
+          sliderNumber={sliderNumber2}
+          sliderTitle={"Top Gainers"}
+        />
+        <Slider
+          sliderNumber={sliderNumber3}
+          sliderTitle={"Top Losers"}
+        />
       </div>
 
       <h1 className="pools-title home-title">
@@ -217,6 +235,156 @@ export function MobileViewed() {
               </div>
             </td>
           </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img
+                      width="18"
+                      height={18}
+                      src={icon}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img
+                      width="18"
+                      height={18}
+                      src={icon}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img
+                      width="18"
+                      height={18}
+                      src={icon}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img
+                      width="18"
+                      height={18}
+                      src={icon}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img
+                      width="18"
+                      height={18}
+                      src={icon}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img
+                      width="18"
+                      height={18}
+                      src={icon}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -230,6 +398,166 @@ export function MobileGainers() {
       <table>
         <thead></thead>
         <tbody>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
           <tr>
             <td>
               <div className="slide-title">
@@ -337,6 +665,126 @@ export function MobileLoosers() {
               </div>
             </td>
           </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="slide-title">
+                <div className="slide-heading">
+                  <div className="slide-icon">
+                    <img src={eth18} alt="" />
+                  </div>
+                </div>
+                <span>KATA</span>/WBNB
+              </div>
+            </td>
+            <td>
+              <div className="slide-numbers">
+                <div className="slide-number">$1.83M</div>
+                <div className="slide-percent plus">
+                  +9.48%
+                </div>
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -347,7 +795,6 @@ export function MobilePools() {
   return (
     <div className="pools-mobile">
       <h1 className="slider-title-text">BNB Chain Pools</h1>
-
       <div className="home-table">
         <table>
           <thead>
@@ -443,8 +890,147 @@ export function MobilePools() {
               <td>$0.9981</td>
               <td className="plus">-0.42%</td>
             </tr>
+            <tr>
+              <td className="pool">
+                <div className="pool-icon">
+                  <img
+                    width={32}
+                    height={32}
+                    src={icon}
+                    alt=""
+                  />
+                </div>
+                <div className="pool-title">
+                  <span>ETH</span>/WBNB
+                </div>
+              </td>
+              <td>$0.9981</td>
+              <td className="minus">-0.42%</td>
+            </tr>
+            <tr>
+              <td className="pool">
+                <div className="pool-icon">
+                  <img
+                    width={32}
+                    height={32}
+                    src={icon}
+                    alt=""
+                  />
+                </div>
+                <div className="pool-title">
+                  <span>ETH</span>/WBNB
+                </div>
+              </td>
+              <td>$0.9981</td>
+              <td className="minus">-0.42%</td>
+            </tr>
+            <tr>
+              <td className="pool">
+                <div className="pool-icon">
+                  <img
+                    width={32}
+                    height={32}
+                    src={icon}
+                    alt=""
+                  />
+                </div>
+                <div className="pool-title">
+                  <span>ETH</span>/WBNB
+                </div>
+              </td>
+              <td>$0.9981</td>
+              <td className="minus">-0.42%</td>
+            </tr>
+            <tr>
+              <td className="pool">
+                <div className="pool-icon">
+                  <img
+                    width={32}
+                    height={32}
+                    src={icon}
+                    alt=""
+                  />
+                </div>
+                <div className="pool-title">
+                  <span>ETH</span>/WBNB
+                </div>
+              </td>
+              <td>$0.9981</td>
+              <td className="minus">-0.42%</td>
+            </tr>
+            <tr>
+              <td className="pool">
+                <div className="pool-icon">
+                  <img
+                    width={32}
+                    height={32}
+                    src={icon}
+                    alt=""
+                  />
+                </div>
+                <div className="pool-title">
+                  <span>ETH</span>/WBNB
+                </div>
+              </td>
+              <td>$0.9981</td>
+              <td className="minus">-0.42%</td>
+            </tr>
           </tbody>
         </table>
+      </div>
+      <div className="mobile">
+        <div className="table-controls">
+          <div className="controls">
+            <div className="controls-btns">
+              <div className="controls-btns-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 12L6 8L10 4"
+                    stroke="#374160"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div className="controls-btns-text">
+                Назад
+              </div>
+            </div>
+            <div className="controls-page-list">
+              <div className="page-item active">1</div>
+              <div className="page-item">2</div>{" "}
+              <div className="page-item">3</div>
+            </div>
+            <div className="controls-btns btn-forward">
+              <div className="controls-btns-text">
+                Вперед
+              </div>
+              <div className="controls-btns-icon">
+                <svg
+                  className="forward"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 12L6 8L10 4"
+                    stroke="#374160"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

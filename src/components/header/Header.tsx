@@ -8,6 +8,8 @@ import Selector from "./components/selector/Selector";
 function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] =
     useState(false);
+  const [mobileInputIsOpen, setMobileInputIsOpen] =
+    useState(false);
 
   function handleMobile(isOpen: boolean) {
     setMobileMenuIsOpen(isOpen);
@@ -68,8 +70,45 @@ function Header() {
         </div>
       </div>
 
+      <div
+        className={
+          mobileInputIsOpen
+            ? "mobile-input active"
+            : "mobile-input"
+        }
+      >
+        <input
+          type="text"
+          placeholder="Search network, dex or tokens"
+        />
+
+        <div
+          onClick={() => setMobileInputIsOpen(false)}
+          className="input-icon"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="#374160"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
       <div className="header-mobile">
-        <div className="header-mobile-icon">
+        <div
+          onClick={() => setMobileInputIsOpen(true)}
+          className="header-mobile-icon"
+        >
           <svg
             width="24"
             height="24"
@@ -163,7 +202,13 @@ function Header() {
           </div>
         </div>
         <div className="header-mobile-menu-links">
-          <NavLink to={""} className="mobile-menu-link">
+          <NavLink
+            to={""}
+            onClick={() => {
+              handleMobile(false);
+            }}
+            className="mobile-menu-link"
+          >
             <div className="menu-link-icon">
               <svg
                 width="32"
@@ -183,7 +228,13 @@ function Header() {
             </div>
             <div className="menu-link-text">Home</div>
           </NavLink>{" "}
-          <NavLink to={"dex"} className="mobile-menu-link">
+          <NavLink
+            onClick={() => {
+              handleMobile(false);
+            }}
+            to={"dex"}
+            className="mobile-menu-link"
+          >
             <div className="menu-link-icon">
               <svg
                 width="32"
@@ -205,7 +256,13 @@ function Header() {
               Dex analizer
             </div>
           </NavLink>{" "}
-          <NavLink to={"swap"} className="mobile-menu-link">
+          <NavLink
+            onClick={() => {
+              handleMobile(false);
+            }}
+            to={"swap"}
+            className="mobile-menu-link"
+          >
             <div className="menu-link-icon">
               <svg
                 width="32"

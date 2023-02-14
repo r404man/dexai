@@ -8,7 +8,11 @@ import {
   Legend,
 } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-import { redirect, useNavigate } from "react-router-dom";
+import {
+  Link,
+  redirect,
+  useNavigate,
+} from "react-router-dom";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Dex() {
@@ -17,7 +21,7 @@ function Dex() {
   let navigate = useNavigate();
   useEffect(() => {
     if (windowSize.current[0] < 769) {
-      return navigate("/dex/overview");
+      return navigate("/dex/chart");
     }
   });
 
@@ -76,7 +80,11 @@ function Dex() {
                     <td>2,427.45</td>
                     <td>$62.65</td>
                     <td className="from">0x0ff...9j3d</td>
-                    <td className="tx">View</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
                   </tr>
                   <tr className="plus">
                     <td>57 seconds ago</td>
@@ -86,7 +94,11 @@ function Dex() {
                     <td>2,427.45</td>
                     <td>$62.65</td>
                     <td className="from">0x0ff...9j3d</td>
-                    <td className="tx">View</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
                   </tr>
                   <tr className="plus">
                     <td>57 seconds ago</td>
@@ -96,7 +108,11 @@ function Dex() {
                     <td>2,427.45</td>
                     <td>$62.65</td>
                     <td className="from">0x0ff...9j3d</td>
-                    <td className="tx">View</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
                   </tr>
                   <tr className="plus">
                     <td>57 seconds ago</td>
@@ -106,7 +122,11 @@ function Dex() {
                     <td>2,427.45</td>
                     <td>$62.65</td>
                     <td className="from">0x0ff...9j3d</td>
-                    <td className="tx">View</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
                   </tr>
                   <tr className="minus">
                     <td>57 seconds ago</td>
@@ -116,7 +136,11 @@ function Dex() {
                     <td>2,427.45</td>
                     <td>$62.65</td>
                     <td className="from">0x0ff...9j3d</td>
-                    <td className="tx">View</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
                   </tr>
                   <tr className="plus">
                     <td>57 seconds ago</td>
@@ -126,7 +150,53 @@ function Dex() {
                     <td>2,427.45</td>
                     <td>$62.65</td>
                     <td className="from">0x0ff...9j3d</td>
-                    <td className="tx">View</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr className="plus">
+                    <td>57 seconds ago</td>
+                    <td>Sell</td>
+                    <td>0.00008262</td>
+                    <td>$0.02851</td>
+                    <td>2,427.45</td>
+                    <td>$62.65</td>
+                    <td className="from">0x0ff...9j3d</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr className="plus">
+                    <td>57 seconds ago</td>
+                    <td>Sell</td>
+                    <td>0.00008262</td>
+                    <td>$0.02851</td>
+                    <td>2,427.45</td>
+                    <td>$62.65</td>
+                    <td className="from">0x0ff...9j3d</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr className="plus">
+                    <td>57 seconds ago</td>
+                    <td>Sell</td>
+                    <td>0.00008262</td>
+                    <td>$0.02851</td>
+                    <td>2,427.45</td>
+                    <td>$62.65</td>
+                    <td className="from">0x0ff...9j3d</td>
+                    <td className="tx">
+                      <Link to={""} className="tx-link">
+                        View
+                      </Link>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -269,34 +339,30 @@ export function Overview({ isMobile }: any) {
             </li>
             <li className="list-item">
               <div className="list-item-label">
-                Market Cap
+                24h Volume
               </div>
               <div className="list-item-value">$2.58M</div>
             </li>
             <li className="list-item">
-              <div className="list-item-label">
-                Market Cap
-              </div>
+              <div className="list-item-label">Holders</div>
               <div className="list-item-value">$2.58M</div>
             </li>
           </ul>
           <ul className="controller-list">
             <li className="list-item">
               <div className="list-item-label">
-                Market Cap
+                Liquidity
               </div>
               <div className="list-item-value">$2.58M</div>
             </li>
             <li className="list-item">
               <div className="list-item-label">
-                Market Cap
+                Total supply
               </div>
               <div className="list-item-value">$2.58M</div>
             </li>
             <li className="list-item">
-              <div className="list-item-label">
-                Market Cap
-              </div>
+              <div className="list-item-label">Taxes</div>
               <div className="list-item-value">
                 BUY -0% / SELL - 3%
               </div>
@@ -1140,6 +1206,60 @@ export function Holders({ isMobile }: any) {
             </div>
           </div>
         </div>
+        <div className="mobile">
+          <div className="table-controls">
+            <div className="controls">
+              <div className="controls-btns">
+                <div className="controls-btns-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12L6 8L10 4"
+                      stroke="#374160"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="controls-btns-text">
+                  Назад
+                </div>
+              </div>
+              <div className="controls-page-list">
+                <div className="page-item active">1</div>
+                <div className="page-item">2</div>{" "}
+                <div className="page-item">3</div>
+              </div>
+              <div className="controls-btns btn-forward">
+                <div className="controls-btns-text">
+                  Вперед
+                </div>
+                <div className="controls-btns-icon">
+                  <svg
+                    className="forward"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12L6 8L10 4"
+                      stroke="#374160"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -1212,7 +1332,11 @@ export function Chart() {
                   <td>2,427.45</td>
                   <td>$62.65</td>
                   <td className="from">0x0ff...9j3d</td>
-                  <td className="tx">View</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
                 </tr>
                 <tr className="plus">
                   <td>57 seconds ago</td>
@@ -1222,7 +1346,11 @@ export function Chart() {
                   <td>2,427.45</td>
                   <td>$62.65</td>
                   <td className="from">0x0ff...9j3d</td>
-                  <td className="tx">View</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
                 </tr>
                 <tr className="plus">
                   <td>57 seconds ago</td>
@@ -1232,7 +1360,11 @@ export function Chart() {
                   <td>2,427.45</td>
                   <td>$62.65</td>
                   <td className="from">0x0ff...9j3d</td>
-                  <td className="tx">View</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
                 </tr>
                 <tr className="plus">
                   <td>57 seconds ago</td>
@@ -1242,7 +1374,67 @@ export function Chart() {
                   <td>2,427.45</td>
                   <td>$62.65</td>
                   <td className="from">0x0ff...9j3d</td>
-                  <td className="tx">View</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="plus">
+                  <td>57 seconds ago</td>
+                  <td>Sell</td>
+                  <td>0.00008262</td>
+                  <td>$0.02851</td>
+                  <td>2,427.45</td>
+                  <td>$62.65</td>
+                  <td className="from">0x0ff...9j3d</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="plus">
+                  <td>57 seconds ago</td>
+                  <td>Sell</td>
+                  <td>0.00008262</td>
+                  <td>$0.02851</td>
+                  <td>2,427.45</td>
+                  <td>$62.65</td>
+                  <td className="from">0x0ff...9j3d</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="plus">
+                  <td>57 seconds ago</td>
+                  <td>Sell</td>
+                  <td>0.00008262</td>
+                  <td>$0.02851</td>
+                  <td>2,427.45</td>
+                  <td>$62.65</td>
+                  <td className="from">0x0ff...9j3d</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="plus">
+                  <td>57 seconds ago</td>
+                  <td>Sell</td>
+                  <td>0.00008262</td>
+                  <td>$0.02851</td>
+                  <td>2,427.45</td>
+                  <td>$62.65</td>
+                  <td className="from">0x0ff...9j3d</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
                 </tr>
                 <tr className="minus">
                   <td>57 seconds ago</td>
@@ -1252,7 +1444,11 @@ export function Chart() {
                   <td>2,427.45</td>
                   <td>$62.65</td>
                   <td className="from">0x0ff...9j3d</td>
-                  <td className="tx">View</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
                 </tr>
                 <tr className="plus">
                   <td>57 seconds ago</td>
@@ -1262,11 +1458,16 @@ export function Chart() {
                   <td>2,427.45</td>
                   <td>$62.65</td>
                   <td className="from">0x0ff...9j3d</td>
-                  <td className="tx">View</td>
+                  <td className="tx">
+                    <Link to={""} className="tx-link">
+                      View
+                    </Link>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
+
           <div className="dex-table-controls">
             <div className="table-controls">
               <div className="controls">
@@ -1292,12 +1493,9 @@ export function Chart() {
                   </div>
                 </div>
                 <div className="controls-page-list">
-                  <div className="page-item">1</div>
+                  <div className="page-item active">1</div>
                   <div className="page-item">2</div>{" "}
                   <div className="page-item">3</div>{" "}
-                  <div className="page-item active">4</div>
-                  <div className="page-item">...</div>
-                  <div className="page-item">414</div>
                 </div>
                 <div className="controls-btns btn-forward">
                   <div className="controls-btns-text">
