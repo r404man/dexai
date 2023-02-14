@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 // import icon from "./../../../assets/eth.png";
-import icon from "../../../assets/eth.png";
+import icon from "../../../assets/home-icons/ETH.svg";
 
 import Card from "./components/card/Card";
 import Slider from "./components/slider/Slider";
@@ -403,7 +403,12 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={icon} alt="" />
+                    <img
+                      width={18}
+                      height={18}
+                      src={icon}
+                      alt=""
+                    />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
