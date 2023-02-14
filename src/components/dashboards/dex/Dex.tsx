@@ -268,6 +268,35 @@ function Dex() {
 }
 
 export function Overview({ isMobile }: any) {
+  function handleSelector(e: any, currItem: any) {
+    let items = document.querySelectorAll(".head-item");
+    items.forEach((item) => (item.className = "head-item"));
+    e.target.classList.add("active");
+  }
+
+  let selectors = [
+    { id: 0, text: "5m", status: false },
+    { id: 1, text: "15m", status: false },
+    { id: 2, text: "30m", status: false },
+    { id: 3, text: "1h", status: false },
+    { id: 4, text: "6h", status: false },
+    { id: 4, text: "24h", status: false },
+  ];
+
+  let listItems = selectors.map((item, index) => (
+    <div
+      key={index}
+      onClick={(e) => {
+        handleSelector(e, item);
+      }}
+      className={
+        item.status ? "head-item active" : "head-item"
+      }
+    >
+      {item.text}
+    </div>
+  ));
+
   return (
     <div className="dex">
       <div className="controller-overview">
@@ -531,31 +560,24 @@ export function Overview({ isMobile }: any) {
         </div>
 
         <div className="controller-selector">
-          <div className="selector-head">
-            <div className="head-item">5m</div>
-            <div className="head-item">15m</div>
-            <div className="head-item">30m</div>
-            <div className="head-item">1h</div>
-            <div className="head-item active">6h</div>
-            <div className="head-item">24h</div>
-          </div>
+          <div className="selector-head">{listItems}</div>
           <div className="selector-footer">
-            <div className="selector-footer-item">
+            <Link to={""} className="selector-footer-item">
               <div className="item-title">TXNS</div>
               <div className="item-subtitle">20,112</div>
-            </div>
-            <div className="selector-footer-item">
+            </Link>
+            <Link to={""} className="selector-footer-item">
               <div className="item-title">Buys</div>
               <div className="item-subtitle">20,112</div>
-            </div>
-            <div className="selector-footer-item">
+            </Link>
+            <Link to={""} className="selector-footer-item">
               <div className="item-title">Sells</div>
               <div className="item-subtitle">20,112</div>
-            </div>
-            <div className="selector-footer-item">
+            </Link>
+            <Link to={""} className="selector-footer-item">
               <div className="item-title">Volume</div>
               <div className="item-subtitle">$8,37M</div>
-            </div>
+            </Link>
           </div>
         </div>
 
