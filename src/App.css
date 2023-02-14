@@ -20,3 +20,16 @@
         display: block;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    .app-menu {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1900px) {
+    .app-menu {
+        padding: 0;
+    }
+}

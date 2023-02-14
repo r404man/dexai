@@ -712,3 +712,88 @@
         margin-bottom: 12px;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .dex {
+        padding: 0px;
+    }
+    .dex-part {
+        padding: 0px 16px 24px 95px;
+        flex-direction: column;
+    }
+    .dex .dex-controller {
+        width: 100%;
+    }
+    .dex-controller-toggler {
+        padding-left: 95px;
+    }
+    .controller-wallet {
+        overflow: hidden;
+    }
+    .dex .controller-wallet .wallet-name {
+        width: 25px;
+    }
+    .dex-info {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .dex-table {
+        table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+            background-color: unset;
+            border: unset;
+            box-shadow: unset;
+            th {
+                padding: 10px;
+            }
+            tr td {
+                padding: 10px;
+            }
+        }
+    }
+    // .controller-overview {
+    //     padding-left: 95px;
+    //     padding-right: 16px;
+    // }
+}
+
+@media (min-width: 1201px) and (max-width: 1900px) {
+    .dex-controller {
+        .dex {
+            padding: 0px;
+        }
+    }
+    .dex-part {
+        padding: 0px 16px 24px 95px;
+    }
+    .dex-controller-toggler {
+        padding-left: 95px;
+    }
+    .controller-wallet {
+        overflow: hidden;
+    }
+    .dex .controller-wallet .wallet-name {
+        width: 25px;
+    }
+    .dex .controller-selector .selector-footer {
+        padding: 0px 5px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .holders-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .holders-pie .pie-chart {
+        margin-right: 10px;
+    }
+    .holders-list-item .item-wallet {
+        padding-left: 24px;
+    }
+    .holders-list-item .item-text {
+        margin-bottom: 10px;
+    }
+}

@@ -1,7 +1,10 @@
 import React from "react";
 import icon from "./../../../assets/eth.png";
+import eth18 from "../../../assets/eth18.png";
+
 import Card from "./components/card/Card";
 import Slider from "./components/slider/Slider";
+import TableRow from "./components/tablerow/TableRow";
 import "./home.scss";
 
 function Home() {
@@ -20,10 +23,6 @@ function Home() {
         <Card isUp={false} />
       </div>
 
-      {/* Top Losers Mobile */}
-
-      {/* Pools Mobile */}
-
       <div className="home-sliders">
         <Slider sliderNumber={sliderNumber1} />
         <Slider sliderNumber={sliderNumber2} />
@@ -36,114 +35,31 @@ function Home() {
       <div className="home-table">
         <table>
           <thead>
-            <th className="order"></th>
-            <th className="pool">Pool</th>
-            <th className="price">Price</th>
-            <th className="hours">24h TXNS</th>
-            <th className="min">5m</th>
-            <th className="hour">1h</th>
-            <th className="sixhour">6h</th>
-            <th className="twofour">24h</th>
-            <th className="volume">24h volume</th>
-            <th className="liqudity">Liquidity</th>
+            <tr>
+              <th className="order"></th>
+              <th className="pool">Pool</th>
+              <th className="price">Price</th>
+              <th className="hours">24h TXNS</th>
+              <th className="min">5m</th>
+              <th className="hour">1h</th>
+              <th className="sixhour">6h</th>
+              <th className="twofour">24h</th>
+              <th className="volume">24h volume</th>
+              <th className="liqudity">Liquidity</th>
+            </tr>
           </thead>
 
           <tbody>
-            <tr>
-              <th className="pool">
-                <div className="pool-icon">
-                  <img
-                    width={32}
-                    height={32}
-                    src={icon}
-                    alt=""
-                  />
-                </div>
-                <div className="pool-title">
-                  <span>ETH</span>/WBNB
-                </div>
-              </th>
-              <td>$0.9981</td>
-              <td>61,287</td>
-              <td className="plus">+0.02%</td>
-              <td className="minus">-0.44%</td>
-              <td className="minus">-0.42%</td>
-              <td className="minus">-0.45%</td>
-              <td>$18M</td>
-              <td>$137.6M</td>
-            </tr>
-
-            <tr>
-              <th className="pool">
-                <div className="pool-icon">
-                  <img
-                    width={32}
-                    height={32}
-                    src={icon}
-                    alt=""
-                  />
-                </div>
-                <div className="pool-title">
-                  <span>ETH</span>/WBNB
-                </div>
-              </th>
-              <td>$0.9981</td>
-              <td>61,287</td>
-              <td className="plus">+0.02%</td>
-              <td className="minus">-0.44%</td>
-              <td className="minus">-0.42%</td>
-              <td className="minus">-0.45%</td>
-              <td>$18M</td>
-              <td>$137.6M</td>
-            </tr>
-
-            <tr>
-              <td className="pool">
-                <div className="pool-icon">
-                  <img
-                    width={32}
-                    height={32}
-                    src={icon}
-                    alt=""
-                  />
-                </div>
-                <div className="pool-title">
-                  <span>ETH</span>/WBNB
-                </div>
-              </td>
-              <td>$0.9981</td>
-              <td>61,287</td>
-              <td className="plus">+0.02%</td>
-              <td className="minus">-0.44%</td>
-              <td className="minus">-0.42%</td>
-              <td className="minus">-0.45%</td>
-              <td>$18M</td>
-              <td>$137.6M</td>
-            </tr>
-
-            <tr>
-              <td className="pool">
-                <div className="pool-icon">
-                  <img
-                    width={32}
-                    height={32}
-                    src={icon}
-                    alt=""
-                  />
-                </div>
-                <div className="pool-title">
-                  <span>ETH</span>/WBNB
-                </div>
-              </td>
-              <td>$0.9981</td>
-              <td>61,287</td>
-              <td className="plus">+0.02%</td>
-              <td className="minus">-0.44%</td>
-              <td className="minus">-0.42%</td>
-              <td className="minus">-0.45%</td>
-              <td>$18M</td>
-              <td>$137.6M</td>
-            </tr>
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
           </tbody>
         </table>
       </div>
@@ -161,8 +77,8 @@ function Home() {
                 <path
                   d="M10 12L6 8L10 4"
                   stroke="#374160"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
@@ -190,8 +106,8 @@ function Home() {
                 <path
                   d="M10 12L6 8L10 4"
                   stroke="#374160"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
@@ -319,62 +235,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img
-                      width="18"
-                      height={18}
-                      src={icon}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <span>KATA</span>/WBNB
-              </div>
-            </td>
-            <td>
-              <div className="slide-numbers">
-                <div className="slide-number">$1.83M</div>
-                <div className="slide-percent plus">
-                  +9.48%
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div className="slide-title">
-                <div className="slide-heading">
-                  <div className="slide-icon">
-                    <img
-                      width="18"
-                      height={18}
-                      src={icon}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <span>KATA</span>/WBNB
-              </div>
-            </td>
-            <td>
-              <div className="slide-numbers">
-                <div className="slide-number">$1.83M</div>
-                <div className="slide-percent plus">
-                  +9.48%
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div className="slide-title">
-                <div className="slide-heading">
-                  <div className="slide-icon">
-                    <img
-                      width="18"
-                      height={18}
-                      src={icon}
-                      alt=""
-                    />
+                    <img src={eth18} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -490,9 +351,11 @@ export function MobilePools() {
       <div className="home-table">
         <table>
           <thead>
-            <th className="pool">Pool</th>
-            <th className="price">Price</th>
-            <th className="twofour">24h</th>
+            <tr>
+              <th className="pool">Pool</th>
+              <th className="price">Price</th>
+              <th className="twofour">24h</th>
+            </tr>
           </thead>
           <tbody>
             <tr>

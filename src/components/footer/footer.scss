@@ -52,3 +52,110 @@ footer {
         display: none;
     }
 }
+
+.footer .footer__stores {
+    display: flex;
+}
+
+.footer .footer__stores .footer__stores-flipper {
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner {
+    background: #151926;
+    border: 1px solid #1d243a;
+    border-radius: 4px;
+    height: 51px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    width: 138px;
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner .front {
+    cursor: pointer;
+    align-items: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.front svg {
+    margin-right: 8px;
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner .front img {
+    margin-right: 6px;
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner .front span {
+    font-size: 8px;
+    margin-bottom: 8px;
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner .front .apple p {
+    font-size: 16px;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner .front .play p {
+    font-size: 14px;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner .back {
+    align-items: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #f0f2f5;
+    border-radius: 4px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: relative;
+    top: 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    width: 100%;
+}
+
+.footer .footer__stores .footer__stores-flipper .footer__stores-flipper_inner .back p {
+    color: #000;
+    font-family: GothamPro;
+    text-transform: uppercase;
+}
+
+.footer .footer__stores .footer__stores-flipper:hover .footer__stores-flipper_inner {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.footer .footer__stores .footer__stores-flipper:first-child {
+    margin-right: 16px;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    footer {
+        grid-template-columns: 0.6fr 0.2fr 1fr 0.5fr;
+        padding: 0px 16px 20px 95px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+    footer {
+        padding-left: 95px;
+    }
+}

@@ -137,27 +137,57 @@ header {
     color: #374160 !important;
 }
 
+.primary-btn {
+    padding: 1px;
+    background: linear-gradient(93.3deg, #18fff0 0%, #642fc5 100%);
+    border-radius: 6px;
+}
+
 .header-connect {
     border-radius: 6px;
-    background: linear-gradient(93.3deg, #18fff0 0%, #642fc5 100%);
     padding: 1px;
     display: flex;
     align-content: center;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+                93.3deg,
+                rgba(23, 212, 187, 0.6) 0%,
+                rgba(34, 41, 74, 0.6) 51.56%,
+                rgba(100, 47, 197, 0.6) 100%
+            ),
+            #11141f;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+        width: 200%;
+    }
 }
 
 .connect {
+    z-index: 10;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(
-            93.3deg,
-            rgba(23, 212, 187, 0.6) 0%,
-            rgba(34, 41, 74, 0.6) 51.56%,
-            rgba(100, 47, 197, 0.6) 100%
-        ),
-        #11141f;
+    // background: linear-gradient(
+    //         93.3deg,
+    //         rgba(23, 212, 187, 0.6) 0%,
+    //         rgba(34, 41, 74, 0.6) 51.56%,
+    //         rgba(100, 47, 197, 0.6) 100%
+    //     ),
+    //     #11141f;
     border-radius: 6px;
     // border: 1px solid;
 }
@@ -174,6 +204,9 @@ header {
 
 @media (min-width: 320px) and (max-width: 768px) {
     header {
+        .primary-btn {
+            display: none;
+        }
         grid-template-columns: 2fr 0.5fr;
         margin-bottom: 16px;
         .header-mobile {
@@ -304,6 +337,21 @@ header {
         align-items: center;
         margin: 40px 16px 0px 16px;
         justify-content: space-between;
+        .footer-controls {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .header-mobile-menu-apps .footer .footer__stores {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .footer .footer__stores {
+            justify-content: space-between;
+            width: 100%;
+        }
+        .footer .footer__stores .footer__stores-flipper:first-child {
+            margin-right: 0px;
+        }
     }
 
     .header-mobile-menu-copy {
@@ -314,5 +362,29 @@ header {
             text-align: center;
             width: 100%;
         }
+    }
+}
+
+.connect {
+    text-align: center;
+    justify-content: center;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    header {
+        grid-template-columns: 0.5fr 0.2fr 0.9fr 0.7fr;
+        padding: 0px 16px 0px 95px;
+    }
+    .connect {
+        .connect-title {
+            text-align: left;
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1900px) {
+    header {
+        grid-template-columns: 0.5fr 0.4fr 1fr 0.5fr;
+        padding-left: 95px;
     }
 }

@@ -41,8 +41,8 @@ function Slider({ sliderNumber }: any) {
               <path
                 d="M10 12L6 8L10 4"
                 stroke="white"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
@@ -61,8 +61,8 @@ function Slider({ sliderNumber }: any) {
               <path
                 d="M6 12L10 8L6 4"
                 stroke="white"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
@@ -74,14 +74,14 @@ function Slider({ sliderNumber }: any) {
           modules={[Pagination, Navigation]}
           slidesPerView={1}
           spaceBetween={20}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSwiper={(swiper) =>}
           pagination={pagination}
           navigation={{
             enabled: true,
             nextEl: `.image-swiper-button-next-${sliderNumber}`,
             prevEl: `.image-swiper-button-prev-${sliderNumber}`,
           }}
-          onSlideChange={() => console.log("slide change")}
+          // onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <div className="slide">
