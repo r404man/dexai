@@ -804,6 +804,7 @@ export function MobilePools() {
         <table>
           <thead>
             <tr>
+              <th></th>
               <th className="pool">Pool</th>
               <th className="price">Price</th>
               <th className="twofour">24h</th>

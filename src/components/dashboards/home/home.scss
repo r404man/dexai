@@ -442,15 +442,25 @@ span.swiper-pagination-bullet {
     .home {
         padding: 0;
     }
+    .pools-mobile .home-table table thead tr th:first-child {
+        padding: 0;
+        width: 0%;
+    }
     .pools-mobile {
         .mobile {
             display: flex;
             justify-content: center;
             margin-bottom: 70px;
         }
+
+        .home-table tr th {
+            padding-bottom: 10px !important;
+            padding-top: 10px !important;
+        }
         .home-table {
             display: block;
             table {
+                margin-top: 16px;
                 box-shadow: none;
                 background-color: unset;
                 border: none;
@@ -458,32 +468,38 @@ span.swiper-pagination-bullet {
                 overflow-x: auto;
                 white-space: nowrap;
                 thead {
-                    border-bottom: 1px solid #1d243a;
+                    // border-bottom: 1px solid #1d243a;
                     tr {
+                        &::before {
+                            display: none;
+                        }
                         th {
                             font-size: 10px;
                             &.pool {
-                                padding-left: 2rem;
+                                // padding-left: 2rem;
                             }
                         }
                     }
                 }
-
-                tr {
-                    position: relative;
-                }
                 tr::before {
                     font-size: 12px;
-                    position: absolute;
-                    top: 37%;
-                    left: 16px;
+                    // position: absolute;
+                    display: table-cell;
+                    counter-increment: rowNumber;
+                    content: counter(rowNumber) ".";
+                    text-align: right;
+                    color: #374160;
+                    vertical-align: inherit;
+                    padding-bottom: 0px;
+                    font-size: 12px;
+                    padding-left: 16px;
                 }
 
                 td {
                     font-size: 12px;
-                    border-bottom: 1px solid #1d243a;
+                    // border-bottom: 1px solid #1d243a;
                     &.pool {
-                        padding-left: 2rem;
+                        padding-left: 1rem;
                     }
                 }
 
