@@ -443,6 +443,11 @@ span.swiper-pagination-bullet {
         padding: 0;
     }
     .pools-mobile {
+        .mobile {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 70px;
+        }
         .home-table {
             display: block;
             table {
