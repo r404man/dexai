@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import icon from "./../../../assets/eth.png";
-import eth18 from "../../../assets/eth18.png";
+// import icon from "./../../../assets/eth.png";
+import icon from "../../../assets/eth.png";
 
 import Card from "./components/card/Card";
 import Slider from "./components/slider/Slider";
@@ -403,7 +403,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -423,7 +423,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -443,7 +443,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -463,7 +463,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -483,7 +483,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -503,7 +503,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -523,7 +523,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -543,7 +543,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -563,7 +563,7 @@ export function MobileGainers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -670,7 +670,7 @@ export function MobileLoosers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -690,7 +690,7 @@ export function MobileLoosers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -710,7 +710,7 @@ export function MobileLoosers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -730,7 +730,7 @@ export function MobileLoosers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -750,7 +750,7 @@ export function MobileLoosers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB
@@ -770,7 +770,7 @@ export function MobileLoosers() {
               <div className="slide-title">
                 <div className="slide-heading">
                   <div className="slide-icon">
-                    <img src={eth18} alt="" />
+                    <img src={icon} alt="" />
                   </div>
                 </div>
                 <span>KATA</span>/WBNB

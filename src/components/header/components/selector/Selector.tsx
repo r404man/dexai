@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import eth from "./../../../../assets/selector/selector-eth.png";
-import poly from "./../../../../assets/selector/selector-poly.png";
-import bnb from "./../../../../assets/selector/selector-bnb.png";
+import eth from "./../../../../assets/ETH.svg";
+import poly from "./../../../../assets/Polygon.svg";
+import bnb from "./../../../../assets/BNB.svg";
 
 import "./selector.scss";
 
@@ -38,7 +38,12 @@ function Selector() {
       onClick={() => handleSelector(currency)}
     >
       <div className="selector-item-icon">
-        <img src={currency.url} alt="" />
+        <img
+          width={28}
+          height={28}
+          src={currency.url}
+          alt=""
+        />
       </div>
       <div className="selector-item-text">
         {currency.name}
@@ -61,7 +66,12 @@ function Selector() {
 
       <div className="selector-left">
         <div className="selector-icon">
-          <img src={currentCurrency.url} alt="" />
+          <img
+            width={28}
+            height={28}
+            src={currentCurrency.url}
+            alt=""
+          />
         </div>
         <div className="selector-title">
           {currentCurrency.name}

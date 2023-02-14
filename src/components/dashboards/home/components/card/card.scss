@@ -28,6 +28,14 @@
     }
 }
 
+.card-item.minus {
+    .card-icon {
+        svg {
+            transform: unset;
+        }
+    }
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
     .card-item {
         padding: 16px 16px 26px 16px;
