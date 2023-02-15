@@ -13,6 +13,7 @@ import {
   redirect,
   useNavigate,
 } from "react-router-dom";
+import HolderItem from "./components/holderItem/HolderItem";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Dex() {
@@ -1024,10 +1025,12 @@ export function Overview({ isMobile }: any) {
           <div className="controller-wallet">
             <div className="wallet-name">Links</div>
             <div className="wallet-links">
-              <div className="wallet-link">Bubblemaps</div>
-              <div className="wallet-link">
+              <Link to={""} className="wallet-link">
+                Bubblemaps
+              </Link>
+              <Link to={""} className="wallet-link">
                 The Ruq Check
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -1185,85 +1188,16 @@ export function Holders({ isMobile }: any) {
           </div>
         </div>
         <div className="holder-list">
-          <div className="holders-list-item">
-            <div className="item-text">
-              <div className="item-number">1</div>
-              <div className="item-info">
-                <div className="item-title">
-                  1,775,447,444,069.79 Eth
-                </div>
-                <div className="item-subtitle">17.75%</div>
-              </div>
-            </div>
-            <div className="item-wallet">
-              <div className="item-wallet-number">
-                0xb541...1c9628
-              </div>
-              <div className="item-wallet-status">
-                Burn Address
-              </div>
-            </div>
-          </div>
-
-          <div className="holders-list-item">
-            <div className="item-text">
-              <div className="item-number">1</div>
-              <div className="item-info">
-                <div className="item-title">
-                  1,775,447,444,069.79 Eth
-                </div>
-                <div className="item-subtitle">17.75%</div>
-              </div>
-            </div>
-            <div className="item-wallet">
-              <div className="item-wallet-number">
-                0xb541...1c9628
-              </div>
-              <div className="item-wallet-status">
-                Burn Address
-              </div>
-            </div>
-          </div>
-
-          <div className="holders-list-item">
-            <div className="item-text">
-              <div className="item-number">1</div>
-              <div className="item-info">
-                <div className="item-title">
-                  1,775,447,444,069.79 Eth
-                </div>
-                <div className="item-subtitle">17.75%</div>
-              </div>
-            </div>
-            <div className="item-wallet">
-              <div className="item-wallet-number">
-                0xb541...1c9628
-              </div>
-              <div className="item-wallet-status">
-                Burn Address
-              </div>
-            </div>
-          </div>
-
-          <div className="holders-list-item">
-            <div className="item-text">
-              <div className="item-number">1</div>
-              <div className="item-info">
-                <div className="item-title">
-                  1,775,447,444,069.79 Eth
-                </div>
-                <div className="item-subtitle">17.75%</div>
-              </div>
-            </div>
-            <div className="item-wallet">
-              <div className="item-wallet-number">
-                0xb541...1c9628
-              </div>
-              <div className="item-wallet-status">
-                Burn Address
-              </div>
-            </div>
-          </div>
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
+          <HolderItem />
         </div>
         <div className="mobile">
           <div className="table-controls">
