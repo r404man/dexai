@@ -21,10 +21,6 @@
     }
 }
 
-.chart-amount {
-    margin-bottom: 16px !important;
-}
-
 .controller-overview h1 {
     margin-bottom: 16px;
 }
@@ -38,248 +34,6 @@
     padding: 0px 16px;
     display: flex;
     flex-direction: column;
-    .dex-controller {
-        width: 25%;
-    }
-
-    .controller-currency {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 24px;
-        .currency-icon {
-            display: flex;
-            margin-right: 16px;
-        }
-        .currency-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .currency-subtitle {
-            color: #374160;
-        }
-    }
-
-    .controller-amount {
-        margin-bottom: 24px;
-        .amount-top {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            margin-bottom: 16px;
-        }
-        .amount-footer {
-            color: #374160;
-        }
-        .amount-number {
-            font-size: 32px;
-            margin-right: 16px;
-            span {
-                color: #374160;
-            }
-        }
-    }
-
-    .controller-favour {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 24px;
-        cursor: pointer;
-
-        .favour-icon {
-            display: flex;
-            margin-right: 8px;
-        }
-
-        .favour-text {
-            font-weight: 500;
-        }
-    }
-
-    .controller-lists {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 24px;
-        ul {
-            padding: 0;
-            li {
-                list-style-type: none;
-                margin-bottom: 16px;
-                &:last-child {
-                    margin-bottom: 0px;
-                }
-                .list-item-label {
-                    font-size: 14px;
-                    color: #374160;
-                    margin-bottom: 8px;
-                }
-            }
-        }
-    }
-
-    .controller-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
-        margin-bottom: 24px;
-        .controller-card {
-            padding: 16px 0px;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            .card-value {
-                color: #fff;
-            }
-
-            &.minus {
-                background: linear-gradient(180deg, #231b2a 14.7%, rgba(35, 27, 42, 0) 100%),
-                    linear-gradient(180deg, #1a2730 14.7%, rgba(26, 39, 48, 0) 100%), #151926;
-                border: 1px solid #1d243a;
-                // .percent-icon {
-                //     transform: rotate(90deg);
-                // }
-            }
-            &.plus {
-                background: linear-gradient(180deg, #1a2730 14.7%, rgba(26, 39, 48, 0) 100%), #151926;
-                border: 1px solid #1d243a;
-                border-radius: 6px;
-            }
-            border-radius: 6px;
-            .amount-percent {
-                margin-bottom: 8px;
-            }
-        }
-    }
-
-    .controller-selector {
-        background: #151926;
-        border: 1px solid #1d243a;
-        border-radius: 6px;
-        padding: 10px 10px 17px 10px;
-        margin-bottom: 16px;
-        .selector-head {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 24px;
-            .head-item {
-                color: #374160;
-                cursor: pointer;
-                padding: 9px 0.3em;
-
-                &:hover {
-                    color: #fff;
-                    background: #11141f;
-                }
-                &.active {
-                    color: #fff;
-                    background: #11141f;
-                    border-radius: 4px;
-                }
-            }
-        }
-
-        .selector-footer {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0px 30px;
-        }
-
-        .selector-footer-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-
-            .item-title {
-                color: #374160;
-                margin-bottom: 8px;
-            }
-        }
-    }
-
-    .controller-wallet {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 16px;
-
-        .wallet-copy-btn {
-            display: flex;
-            padding: 0px 16px;
-            border-right: 1px solid #1d243a;
-            cursor: pointer;
-        }
-        .wallet-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background: #151926;
-            border: 1px solid #1d243a;
-            border-radius: 6px;
-            padding: 8px 16px;
-        }
-        .wallet-icons {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            .wallet-icon {
-                padding-left: 16px;
-            }
-        }
-        .wallet-name {
-            color: #374160;
-            font-size: 14px;
-            width: 35px;
-            margin-right: 15px;
-        }
-        .wallet-value {
-            font-size: 14px;
-        }
-        .wallet-socials {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: wrap;
-            & > * {
-                background: #151926;
-                border: 1px solid #1d243a;
-                border-radius: 6px;
-                margin-right: 8px;
-                padding: 8px 16px;
-                cursor: pointer;
-                display: flex;
-                margin-bottom: 8px;
-                &:last-child {
-                    // margin-bottom: 0px;
-                }
-            }
-        }
-        .wallet-links {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            .wallet-link {
-                background: #151926;
-                border: 1px solid #1d243a;
-                border-radius: 6px;
-                padding: 11px 16px;
-                margin-right: 8px;
-                &:last-child {
-                    margin-right: 0px;
-                }
-            }
-        }
-    }
 }
 
 .dex-info {
@@ -424,113 +178,12 @@
     }
 }
 
-// HOLDERS
-
-.holders-list-item {
-    background: #151926;
-    border: 1px solid #1d243a;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    margin-bottom: 16px;
-
-    .item-text {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .item-wallet-status {
-        color: #ea3943;
-        margin-top: 8px;
-    }
-    .item-number {
-        color: #374160;
-        margin-right: 16px;
-    }
-    .item-info {
-        display: flex;
-        flex-direction: column;
-        font-size: 14px;
-        .item-subtitle {
-            color: #374160;
-            margin-top: 8px;
-        }
-    }
-    .item-wallet {
-        font-size: 14px;
-    }
-}
-
-.holders-pie {
-    background: #151926;
-    border: 1px solid #1d243a;
-    border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 16px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    .pie-chart {
-        position: relative;
-        width: 40%;
-        margin-right: 24px;
-    }
-    .chart-amount {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .chart-title {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 4px;
-    }
-    .chart-subtitle {
-        font-size: 14px;
-        color: #374160;
-    }
-    .pie-legend {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .legend-item {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        &:last-child {
-            margin-bottom: 0px;
-        }
-    }
-    .legend-icon {
-        margin-right: 8px;
-    }
-
-    .legend-info {
-        display: flex;
-        flex-direction: row;
-    }
-}
-
 .dex .controller-wallet .wallet-links {
     flex-wrap: wrap;
 }
 
 .dex .controller-wallet .wallet-links .wallet-link {
     margin-bottom: 5px;
-    &:last-child {
-        // margin-bottom: 0px;
-    }
 }
 
 .minus {
@@ -545,6 +198,7 @@
 .mobile-heading {
     display: none;
 }
+
 @media (min-width: 1201px) and (max-width: 1300px) {
     .wallet-copy-btn {
         margin-right: 8px !important;
@@ -841,10 +495,6 @@
             }
         }
     }
-    // .controller-overview {
-    //     padding-left: 95px;
-    //     padding-right: 16px;
-    // }
 }
 
 @media (min-width: 1201px) and (max-width: 1900px) {
@@ -867,21 +517,5 @@
     }
     .dex .controller-selector .selector-footer {
         padding: 0px 5px;
-    }
-}
-
-@media (min-width: 1201px) and (max-width: 1400px) {
-    .holders-list-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .holders-pie .pie-chart {
-        margin-right: 10px;
-    }
-    .holders-list-item .item-wallet {
-        padding-left: 24px;
-    }
-    .holders-list-item .item-text {
-        margin-bottom: 10px;
     }
 }

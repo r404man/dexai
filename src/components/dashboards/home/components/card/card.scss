@@ -36,6 +36,50 @@
     }
 }
 
+.card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-bottom: 24px;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-icon {
+    margin-right: 16px;
+}
+
+.card-info {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    color: #60f5c2;
+    .card-info-text {
+        margin-left: 4px;
+    }
+}
+
+.card-number {
+    margin-top: 16px;
+    span {
+        font-weight: 400;
+        color: #374160;
+    }
+    font-weight: 700;
+    font-size: 24px;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
     .card-item {
         padding: 16px 16px 26px 16px;

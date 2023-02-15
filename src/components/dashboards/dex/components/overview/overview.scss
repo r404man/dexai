@@ -1,0 +1,119 @@
+.dex {
+    .dex-controller {
+        width: 25%;
+    }
+
+    .controller-currency {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 24px;
+        .currency-icon {
+            display: flex;
+            margin-right: 16px;
+        }
+        .currency-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .currency-subtitle {
+            color: #374160;
+        }
+    }
+
+    .controller-amount {
+        margin-bottom: 24px;
+        .amount-top {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .amount-footer {
+            color: #374160;
+        }
+        .amount-number {
+            font-size: 32px;
+            margin-right: 16px;
+            span {
+                color: #374160;
+            }
+        }
+    }
+
+    .controller-favour {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 24px;
+        cursor: pointer;
+
+        .favour-icon {
+            display: flex;
+            margin-right: 8px;
+        }
+
+        .favour-text {
+            font-weight: 500;
+        }
+    }
+
+    .controller-lists {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        ul {
+            padding: 0;
+            li {
+                list-style-type: none;
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                .list-item-label {
+                    font-size: 14px;
+                    color: #374160;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    .controller-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        margin-bottom: 24px;
+        .controller-card {
+            padding: 16px 0px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            .card-value {
+                color: #fff;
+            }
+
+            &.minus {
+                background: linear-gradient(180deg, #231b2a 14.7%, rgba(35, 27, 42, 0) 100%),
+                    linear-gradient(180deg, #1a2730 14.7%, rgba(26, 39, 48, 0) 100%), #151926;
+                border: 1px solid #1d243a;
+                // .percent-icon {
+                //     transform: rotate(90deg);
+                // }
+            }
+            &.plus {
+                background: linear-gradient(180deg, #1a2730 14.7%, rgba(26, 39, 48, 0) 100%), #151926;
+                border: 1px solid #1d243a;
+                border-radius: 6px;
+            }
+            border-radius: 6px;
+            .amount-percent {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

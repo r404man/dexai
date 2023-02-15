@@ -1,28 +1,24 @@
 import React from "react";
 import "./App.css";
-import Home, {
-  MobileFavourites,
-  MobileGainers,
-  MobileLoosers,
-  MobilePools,
-  MobileViewed,
-} from "./components/dashboards/home/Home";
+import Home from "./components/dashboards/home/Home";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Menu from "./components/menu/Menu";
 import "swiper/scss";
 
-import {
-  Route,
-  Link,
-  useParams,
-  Routes,
-} from "react-router-dom";
-import Dex, {
-  Chart,
-  Holders,
-  Overview,
-} from "./components/dashboards/dex/Dex";
+import { Route, Routes } from "react-router-dom";
+
+import Dex from "./components/dashboards/dex/Dex";
+import Chart from "./components/dashboards/dex/components/chart/Chart";
+import Overview from "./components/dashboards/dex/components/overview/Overview";
+import Holders from "./components/dashboards/dex/components/holders/Holders";
+
+import MobileViewed from "./components/dashboards/home/components/mobileViewed/MobileViewed";
+import MobilePools from "./components/dashboards/home/components/mobilePools/MobilePools";
+import MobileLoosers from "./components/dashboards/home/components/mobileLoosers/MobileLoosers";
+import MobileGainers from "./components/dashboards/home/components/mobileGainers/MobileGainers";
+import MobileFavourites from "./components/dashboards/home/components/mobileFavourites/MobileFavourites";
+
 import Swap from "./components/dashboards/swap/Swap";
 
 function App() {
@@ -33,7 +29,6 @@ function App() {
       </div>
       <div className="app-header">
         <Header />
-        {/* <Home /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

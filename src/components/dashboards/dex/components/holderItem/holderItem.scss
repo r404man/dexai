@@ -1,0 +1,15 @@
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .holders-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .holders-pie .pie-chart {
+        margin-right: 10px;
+    }
+    .holders-list-item .item-wallet {
+        padding-left: 24px;
+    }
+    .holders-list-item .item-text {
+        margin-bottom: 10px;
+    }
+}
