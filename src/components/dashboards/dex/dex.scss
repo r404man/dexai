@@ -248,6 +248,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            flex-wrap: wrap;
             & > * {
                 background: #151926;
                 border: 1px solid #1d243a;
@@ -255,6 +256,11 @@
                 margin-right: 8px;
                 padding: 8px 16px;
                 cursor: pointer;
+                display: flex;
+                margin-bottom: 8px;
+                &:last-child {
+                    // margin-bottom: 0px;
+                }
             }
         }
         .wallet-links {
@@ -516,6 +522,17 @@
     }
 }
 
+.dex .controller-wallet .wallet-links {
+    flex-wrap: wrap;
+}
+
+.dex .controller-wallet .wallet-links .wallet-link {
+    margin-bottom: 5px;
+    &:last-child {
+        // margin-bottom: 0px;
+    }
+}
+
 .minus {
     svg {
         transform: rotate(90deg);
@@ -528,6 +545,57 @@
 .mobile-heading {
     display: none;
 }
+@media (min-width: 1201px) and (max-width: 1300px) {
+    .wallet-copy-btn {
+        margin-right: 8px !important;
+    }
+    .wallet-item {
+        width: 100% !important;
+    }
+    .wallet-icons {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8px;
+        .wallet-icon {
+            padding-left: 0px !important;
+        }
+    }
+}
+
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .wallet-item {
+        width: 100% !important;
+    }
+    .wallet-copy-btn {
+        margin-right: 8px !important;
+    }
+    .wallet-icons {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 8px;
+        .wallet-icon {
+            padding-left: 0px !important;
+        }
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1580px) {
+    .wallet-item {
+        width: 100% !important;
+    }
+    .wallet-copy-btn {
+        margin-right: 8px !important;
+    }
+    .wallet-icons {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 8px;
+        .wallet-icon {
+            padding-left: 0px !important;
+        }
+    }
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
     .mobile {
         .table-controls {
